@@ -1,4 +1,4 @@
-namespace CoreDominationBootCamp.Models
+namespace ReservationProject.Models
 {
     public class BaseModel
     {

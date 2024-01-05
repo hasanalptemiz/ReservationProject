@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace CoreDominationBootCamp.Models.ORM
+namespace ReservationProject.Models.ORM
 {
     public class Reservation : BaseModel
     {
