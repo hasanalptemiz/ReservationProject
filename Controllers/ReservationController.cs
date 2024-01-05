@@ -52,12 +52,22 @@ namespace ReservationProject.Controllers
                 return BadRequest();
             }
             newReservation.AddDate = DateTime.Now;
-            Room room = _context.Rooms.Find(newReservation.RoomId);
-            Client client = _context.Clients.Find(newReservation.ClientId);
+            Room? room = _context.Rooms.Find(newReservation.RoomId);
 
-            if (room == null || client == null){return NotFound();}
-            
+            if (room == null)
+            {
+                return NotFound();
+            }
+
+            Client? client = _context.Clients.Find(newReservation.ClientId);
+
+            if (client == null)
+            {
+                return NotFound();
+            }
+
             newReservation.Room = room;
+            newReservation.Client = client;
             newReservation.RoomId = room.Id;
             newReservation.Client = client;
             newReservation.ClientId = client.Id;
