@@ -6,7 +6,17 @@ There is a SQL structure consisting of Client, Room, Company and Reservation tab
 
 
 
-After downloading the project, you can test it with dotnet run command. 
 
+#Run project
 
-You can see the endpoints at https://localhost:7116/swagger
+```sh
+ dotnet run
+
+```
+
+#You can see the endpoints at
+
+```sh
+ https://localhost:7116/swagger
+
+```
