@@ -1,8 +1,7 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.Text.Json.Serialization;
-using Reservation.Context;
+using ReservationProject.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +12,7 @@ builder.Services.AddControllers().AddJsonOptions(x =>
                                              x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 
-builder.Services.AddDbContext<CoreDominationDbContext>();
+builder.Services.AddDbContext<ReservationDbContext>();
 
 //Swagger config
 
